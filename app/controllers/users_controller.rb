@@ -32,6 +32,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def followings
+  end
+  
+  def follwers
+  end
+
   private
   
   def user_params
