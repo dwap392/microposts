@@ -30,6 +30,10 @@
 <% if @user.following_relationships.any? %>
 <%= link_to "フォロー一覧",followings_user_path(current_user.id) %>
 <% end %>
+<br>
+<% if @user.follower_relationships.any? %>
+<%= link_to "フォロワー一覧",followers_user_path(current_user.id) %>
+<% end %>
 
     </div>
 

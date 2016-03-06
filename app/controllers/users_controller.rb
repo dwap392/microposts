@@ -37,7 +37,9 @@ class UsersController < ApplicationController
     @followings = @user.following_users.order(id: :desc)
   end
   
-  def follwers
+  def followers
+    @user = User.find(params[:id])
+    @followers = @user.follower_users.order(id: :desc)
   end
 
   private

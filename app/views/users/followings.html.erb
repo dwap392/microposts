@@ -3,7 +3,7 @@
 <li id="following-<%= following.id %>">
 <%= link_to gravatar_for(following, size: 50), following %>
     <span class="name">
-<%= link_to following.name, following.name %>
+<%= link_to following.name, user_path(following.id) %>
     </span>
     <span class="location">
 <%= following.location %>

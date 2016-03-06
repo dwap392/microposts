@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
 
   validates :location, presence: true, length: { maximum: 50 }
 
+  def feed_items
+    Micropost.where(user_id: following_user_ids + [self.id])
+  end
+
   def follow(other_user)
     following_relationships.find_or_create_by(followed_id: other_user.id)
   end
